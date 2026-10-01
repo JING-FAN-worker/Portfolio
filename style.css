@@ -354,3 +354,117 @@ footer {
 footer p {
     text-align: center;
 }
+/* 新增：公益与兴趣。原有背景、配色及卡片样式保持不变。 */
+#community, #interests { height: auto; min-height: 0; position: relative; padding-top: 4rem; padding-bottom: 3rem; }
+.personal-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin-top: 2rem; }
+#interests .personal-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.personal-card { min-width: 0; }
+.personal-photo { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 1.5rem; margin-bottom: 1.25rem; }
+.personal-example { display: block; font-size: 0.75rem; color: #68796e; margin-bottom: 0.75rem; }
+.personal-card h3 { color: rgb(23, 93, 72); font-size: 1.3rem; margin-bottom: 0.75rem; }
+.personal-meta { font-size: 0.9rem; margin-bottom: 0.75rem; }
+.personal-description { line-height: 1.8; overflow-wrap: anywhere; }
+.personal-link { display: inline-block; width: auto; margin-top: 1rem; }
+.personal-next { display: block; width: fit-content; margin: 2rem 0 0 auto; }
+.menu-links { z-index: 10; }
+.menu-links.open { max-height: 500px; }
+#desktop-nav .nav-links, footer .nav-links { gap: 1.25rem; font-size: 1.15rem; }
+footer { height: auto; padding-bottom: 2rem; }
+/* 让旧项目列表按内容撑开，防止与新增板块重叠。 */
+#projects { height: auto; padding-bottom: 5rem; }
+
+/* 一个大框展示所有技术 */
+#experience {
+  height: auto;
+  min-height: 0;
+  padding-bottom: 3rem;
+}
+
+#experience .skills-box {
+  margin-top: 2rem;
+  padding: 2.5rem;
+}
+
+#experience .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem 3rem;
+  text-align: left;
+}
+
+#experience .skill-group h2 {
+  color: rgb(23, 93, 72);
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+#experience .skill-group p {
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.skills-next {
+  display: block;
+  width: fit-content;
+  margin: 2rem 0 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  #experience .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  #experience .skills-box {
+    padding: 1.5rem;
+  }
+}
+.interests-intro {
+  max-width: 800px;
+  margin: 1.5rem auto 2.5rem;
+  text-align: center;
+  line-height: 1.9;
+}
+
+.art-gallery-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: rgb(23, 93, 72);
+  margin-bottom: 1.5rem;
+}
+
+.art-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.artwork-card {
+  margin: 0;
+  min-width: 0;
+}
+
+.artwork-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #fafaf7;
+  border-radius: 1rem;
+  cursor: zoom-in;
+}
+
+.artwork-card figcaption {
+  margin-top: 1rem;
+}
+
+.artwork-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .art-gallery {
+    grid-template-columns: 1fr;
+  }
+}

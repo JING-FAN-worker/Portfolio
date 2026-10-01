@@ -116,3 +116,51 @@
         height: auto;
     }
 }
+/* 新板块的平板与手机布局 */
+@media screen and (max-width: 1200px) {
+    #interests .personal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media screen and (max-width: 600px) {
+    .personal-grid, #interests .personal-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    #community, #interests { padding-top: 3rem; padding-bottom: 2rem; }
+    .personal-card { padding: 1.25rem; }
+    footer .nav-links { font-size: 1rem; gap: 0.5rem; }
+}
+
+/* 学生项目：每行两张卡片 */
+#projects .experience-details-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+/* 让原来分成两组的卡片进入同一个网格 */
+#projects .experience-details-container > .about-containers {
+  display: contents;
+}
+
+#projects .details-container {
+  min-width: 0;
+}
+
+#projects .project-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+
+#projects .btn-container {
+  flex-wrap: wrap;
+}
+
+#projects {
+  height: auto;
+}
+
+/* 手机窄屏改成一列，避免卡片太挤 */
+@media screen and (max-width: 600px) {
+  #projects .experience-details-container {
+    grid-template-columns: 1fr;
+  }
+}
