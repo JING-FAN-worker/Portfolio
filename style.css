@@ -468,3 +468,18 @@ footer { height: auto; padding-bottom: 2rem; }
     grid-template-columns: 1fr;
   }
 }
+/* 修复 About 在宽屏下内容重叠 */
+#about {
+  height: auto;
+  min-height: 0;
+  padding-bottom: 4rem;
+}
+
+#about .section-container {
+  height: auto;
+}
+
+#about .about-details-container {
+  min-width: 0;
+  justify-content: flex-start;
+}
